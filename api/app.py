@@ -61,11 +61,11 @@ def video_page(vid_id):
     player_url = f"https://{request.host}/player/{vid_id}"
     image_url = f"https://{request.host}/static/images/{vid_id}.{image_ext}"
     
-    twitter_site = '@yourusername'  # Replace with your actual X/Twitter handle
+    twitter_site = '@yourusername'  # Replace with your actual X handle
     title = f'Video {vid_id}'
     description = 'An uploaded video'
     width = 640
-    height = 360  # 16:9 aspect ratio
+    height = 360
     
     html = f'''
     <!DOCTYPE html>
@@ -76,7 +76,7 @@ def video_page(vid_id):
         <title>{title}</title>
         <meta name="twitter:card" content="player">
         <meta name="twitter:site" content="{twitter_site}">
-        <meta nameesl="twitter:title" content="{title}">
+        <meta name="twitter:title" content="{title}">
         <meta name="twitter:description" content="{description}">
         <meta name="twitter:image" content="{image_url}">
         <meta name="twitter:player" content="{player_url}">
